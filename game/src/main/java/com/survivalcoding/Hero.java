@@ -2,9 +2,10 @@ package com.survivalcoding;
 
 public class Hero {
     String name = "dd";
-    int hp;
+    static int hp;
 
     void attack() {
+        hp -= 1;
         System.out.println("공격했다");
     }
 }
