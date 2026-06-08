@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class HeroTest {
 
     @Test
-            @DisplayName("공격 하면 hp가 1씩 감소")
+    @DisplayName("공격 하면 hp가 1씩 감소")
         //("체력이 1식 감소 하는지 테스트")
     void attack() {
         //given 준비
@@ -27,5 +27,5 @@ class HeroTest {
         // then (검증)
         assertEquals(8, hero.hp);    // 8
     }
-    }
+
 }
