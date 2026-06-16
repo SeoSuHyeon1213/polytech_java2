@@ -1,18 +1,39 @@
 @startuml
-scale 4
 
-class SuperHero extends Hero{
-    +void setFlying(bool flying)
-    +boolean isFlying()
-}
 class Hero {
-    - int hp
-    - String name
-    + void attack
+  - name: String
+  - hp: int
+  - maxHP: int
+  --
+  + maxHp()
+  + setHp(hp: int)
+  + getHp(): int
+  + setRandomMoney() {static}
 }
 
-class Wizard{
-    - int a
+class Wizard {
+  - hp: int
+  - mp: int
+  - name: String
+  - wand: Wand
+  --
+  + wizard(mp: int)
+  + heal(hero: Hero)
+  + setMp(mp: int)
+  + getMp(): int
+  + getHp(): int
+  + setHp(hp: int)
 }
+
+class GreatWizard extends Wizard {
+  - mp: int
+  --
+  + GreatWizard(mp: int)
+  + heal(hero: Hero)
+  + superHeal(hero: Hero)
+}
+
+Wizard ..> Hero : heal(hero)
+GreatWizard ..> Hero : heal(hero)
 
 @enduml
