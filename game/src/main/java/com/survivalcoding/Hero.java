@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Hero {
     private String name;
-    private int hp;
+    private int hp = 10;
     //Sword sword;
     static int money = 100;
 
@@ -36,7 +36,7 @@ public class Hero {
         }
         this.name = name;
     }
-    
+
     Hero() {
         this.name = "홍길동";
 

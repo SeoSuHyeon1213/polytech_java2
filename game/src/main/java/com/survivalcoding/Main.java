@@ -7,18 +7,11 @@ public class Main {
 
         //용사 생성 (ram 메모리에 용사 데이터 올리기)
         Hero hero = new Hero();
+        Wizard wizard = new Wizard();
 
 
-        //Hero.hp = 10;
-
-        PoisonSlime slimeA = new PoisonSlime("A");
-        slimeA.poisonSlimeAttack(hero);
-        slimeA.poisonSlimeAttack(hero);
-        slimeA.poisonSlimeAttack(hero);
-        slimeA.poisonSlimeAttack(hero);
-        slimeA.poisonSlimeAttack(hero);
-        slimeA.poisonSlimeAttack(hero);
-        slimeA.poisonSlimeAttack(hero);
-
+        for (int i = 0; i < 20; i++) {
+            wizard.heal(hero);
+        }
     }
 }

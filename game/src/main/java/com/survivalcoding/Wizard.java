@@ -2,9 +2,18 @@ package com.survivalcoding;
 
 public class Wizard {
     private int hp;
-    private int mp;
+    private int mp = 100;
     private String name;
     private Wand wand;
+
+    void heal(Hero hero) {
+        if (this.mp <= 0) {
+            System.out.println("마나가 부족합니다.");
+        }
+        this.mp -= 10;
+        hero.setHp(getHp() + 20);
+        System.out.println("힐을 시전 하였습니다." + "대상 HP: " + hero.getHp());
+    }
 
     //getter
     public int getHp() {

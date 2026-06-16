@@ -9,8 +9,8 @@ public class Slime {
     }
 
     public void attack(Hero hero) {
-        System.out.println("slime " + suffix + " is attacked");
-        System.out.println("-10 Damage");
+        System.out.println("슬라임 " + suffix + " 이/가 공격했다.");
+        System.out.println("-10의 데미지");
         hero.setHp(hero.getHp() - 10);
     }
 }
