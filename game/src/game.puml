@@ -1,0 +1,18 @@
+@startuml
+scale 4
+
+class SuperHero extends Hero{
+    +void setFlying(bool flying)
+    +boolean isFlying()
+}
+class Hero {
+    - int hp
+    - String name
+    + void attack
+}
+
+class Wizard{
+    - int a
+}
+
+@enduml
