@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class Hero {
     private String name;
-    private int hp = 10;
+    private int hp = 0;
+    private int maxHP = 100;
     //Sword sword;
     static int money = 100;
 
@@ -15,6 +16,9 @@ public class Hero {
         hero.name = "홍길동";
     }
 
+    public void maxHp() {
+        this.hp = maxHP;
+    }
 
     //setter 값을 입력
     public void setHp(int hp) {
