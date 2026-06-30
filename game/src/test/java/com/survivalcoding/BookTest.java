@@ -8,6 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 class BookTest {
+    int borrow;
 
     //    private Book book;
 //
@@ -102,6 +103,7 @@ class BookTest {
         books.add(new Book("dff", 2026 - 1 - 30, "comments"));
         books.add(new Book("dff", 2026 - 1 - 30, "comments"));
         books.add(new Book("acdc", 2026 - 1 - 12, "comments"));
+        books.add(new Book("acc", 2026 - 1 - 12, "comments"));
         // 오름차순
 //        Collections.sort(heroes);
 
@@ -111,11 +113,23 @@ class BookTest {
         Collections.sort(books, new Comparator<Book>() {
             @Override
             public int compare(Book o1, Book o2) {
+                if (o1.getTitle() == o2.getTitle() && o1.getPublishDate() == o2.getPublishDate()) {
+                    o1 = o2;
+                    return 0;
+                }
                 return o1.getTitle().compareTo(o2.getTitle()) * -1;
             }
         });
         Collections.sort(books, (o1, o2) -> o1.getTitle().compareTo(o2.getTitle()));
-
     }
 
+    @Override
+    protected Book clone() {
+
+        Book result = new Book("ccdd", 2026 - 1 - 1, "comments");
+
+        result.borrow = this.borrow.clone();
+
+        return result;
+    }
 }

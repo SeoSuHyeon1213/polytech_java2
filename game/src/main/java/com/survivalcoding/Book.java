@@ -12,9 +12,9 @@ public class Book /*extends TangibleAsset*/ {
     private String isbn;
     private String title;
     private long publishDate = Date.parse("2026-06-30");
-    ;
-    private String comment;
 
+    private String comment;
+    public int borrow = 1;
 
     private int bookCount = 0;
 
